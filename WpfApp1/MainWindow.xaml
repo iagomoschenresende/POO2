@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gerenciamento de Clientes" Height="476" Width="939" Background="#f5f5f5">
+    <Grid Margin="0,0,0,4">
+        <!-- Título -->
+        <TextBlock Text="Gerenciamento de Clientes" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0" />
+
+        <!-- Campo para adicionar o nome do cliente -->
+        <TextBox x:Name="txtNomeCliente" HorizontalAlignment="Left" Height="30" Margin="10,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" 
+                 BorderBrush="#ccc" BorderThickness="1" Padding="5" FontSize="14"/>
+        <Button Content="Adicionar Cliente" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="320,50,0,0" Height="30" 
+                Background="#007ACC" Foreground="White" FontWeight="Bold" Padding="5,2" BorderThickness="0" FontSize="14" Click="BtnAdicionarCliente_Click"/>
+
+        <!-- Lista de clientes -->
+        <ListBox x:Name="lstClientes" HorizontalAlignment="Left" Height="200" Margin="10,100,0,0" VerticalAlignment="Top" Width="460" 
+                 BorderBrush="#ccc" BorderThickness="1" SelectionChanged="LstClientes_SelectionChanged"/>
+
+        <!-- Campo para limite da conta corrente -->
+        <TextBlock Text="Limite da Conta Corrente" HorizontalAlignment="Left" Margin="500,50,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="txtLimite" HorizontalAlignment="Left" Height="30" Margin="500,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" 
+                 BorderBrush="#ccc" BorderThickness="1" Padding="5" FontSize="14"/>
+        <Button Content="Adicionar Conta Corrente" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Margin="710,80,0,0" Height="30" 
+                Background="#007ACC" Foreground="White" FontWeight="Bold" Padding="5,2" BorderThickness="0" FontSize="14" Click="BtnAdicionarContaCorrente_Click"/>
+        <Button Content="Adicionar Conta Poupança" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Margin="710,120,0,0" Height="30"
+                Background="#007ACC" Foreground="White" FontWeight="Bold" Padding="5,2" BorderThickness="0" FontSize="14" Click="BtnAdicionarContaPoupanca_Click"/>
+
+        <!-- Campo para adicionar valor para depósito ou saque -->
+        <TextBlock Text="Valor para Depósito/Saque" HorizontalAlignment="Left" Margin="500,160,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="txtValor" HorizontalAlignment="Left" Height="30" Margin="500,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"
+                 BorderBrush="#ccc" BorderThickness="1" Padding="5" FontSize="14"/>
+        <Button Content="Depositar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Margin="710,190,0,0" Height="30"
+                Background="#007ACC" Foreground="White" FontWeight="Bold" Padding="5,2" BorderThickness="0" FontSize="14" Click="BtnDepositar_Click"/>
+        <Button Content="Sacar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Margin="710,230,0,0" Height="30" 
+                Background="#007ACC" Foreground="White" FontWeight="Bold" Padding="5,2" BorderThickness="0" FontSize="14" Click="BtnSacar_Click"/>
+
+        <!-- Lista de contas do cliente selecionado -->
+        <TextBlock Text="Contas do Cliente" HorizontalAlignment="Left" Margin="10,310,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ListBox x:Name="lstContasCliente" HorizontalAlignment="Left" Height="100" Margin="10,340,0,0" VerticalAlignment="Top" Width="460" 
+                 BorderBrush="#ccc" BorderThickness="1"/>
+    </Grid>
+</Window>
